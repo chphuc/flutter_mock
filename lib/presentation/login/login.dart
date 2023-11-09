@@ -56,20 +56,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return Material(
       child: Stack(
         children: <Widget>[
-          MediaQuery.of(context).orientation == Orientation.landscape
-              ? Row(
-                  children: <Widget>[
-                    Expanded(
-                      flex: 1,
-                      child: _buildLeftSide(),
-                    ),
-                    Expanded(
-                      flex: 1,
-                      child: _buildRightSide(),
-                    ),
-                  ],
-                )
-              : Center(child: _buildRightSide()),
+          Center(child: _buildRightSide()),
           Observer(
             builder: (context) {
               return _userStore.success
